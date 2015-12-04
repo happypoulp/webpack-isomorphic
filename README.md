@@ -1,3 +1,3 @@
-README.md
+# Webpack isomorphic experiments
 
 Play with / debug webpack-isomorphic-tools...
