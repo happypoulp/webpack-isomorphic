@@ -1,4 +1,13 @@
+var webpack = require('webpack')
 var path = require('path')
+var WebpackIsoToolsPlugin = require('webpack-isomorphic-tools/plugin')
+
+var isomorphicPlugin = new WebpackIsoToolsPlugin(require('./webpack-isomorphic-tools.config.js'))
+var __DEV__ = process.env.NODE_ENV == 'dev'
+
+if (__DEV__) {
+  isomorphicPlugin = isomorphicPlugin.development()
+}
 
 module.exports = {
   context: path.resolve(__dirname),
@@ -11,9 +20,15 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /json/,
+        test: /\.json$/,
         loader: 'json-loader'
       },
-    ]
-  }
+    ],
+  },
+  plugins: [
+    isomorphicPlugin,
+    new webpack.DefinePlugin({
+      __DEV__: __DEV__
+    })
+  ]
 }
