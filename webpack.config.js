@@ -1,4 +1,3 @@
-var webpack = require('webpack')
 var path = require('path')
 var WebpackIsoToolsPlugin = require('webpack-isomorphic-tools/plugin')
 
@@ -26,9 +25,6 @@ module.exports = {
     ],
   },
   plugins: [
-    isomorphicPlugin,
-    new webpack.DefinePlugin({
-      __DEV__: __DEV__
-    })
+    isomorphicPlugin
   ]
 }

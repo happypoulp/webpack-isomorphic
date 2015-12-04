@@ -1,8 +1,9 @@
 var path = require('path')
 
 global.__DEV__ = process.env.NODE_ENV
+global.__ISO_TOOLS__ = process.env.ISO_TOOLS
 
-if (process.env.ISO_TOOLS !== 'false') {
+if (__ISO_TOOLS__ !== 'false') {
   var projectBasePath = path.resolve(__dirname, '..')
 
   var WebpackIsomorphicTools = require('webpack-isomorphic-tools')
