@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node bin/server.js",
-    "webpack": "webpack  --colors --progress --watch"
+    "start": "NODE_ENV=dev node bin/server.js",
+    "webpack": "NODE_ENV=dev webpack  --colors --progress --watch"
   },
   "author": "",
   "license": "ISC",
