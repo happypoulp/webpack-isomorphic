@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "json-loader": "^0.5.4",
+    "webpack": "^1.12.9",
     "webpack-isomorphic-tools": "^2.2.18"
   }
 }

@@ -8,4 +8,12 @@ module.exports = {
     publicPath: '/static/',
     filename: `[name].js` // by default, name = main
   },
+  module: {
+    loaders: [
+      {
+        test: /json/,
+        loader: 'json-loader'
+      },
+    ]
+  }
 }
