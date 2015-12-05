@@ -1,6 +1,6 @@
+var baseCss = require('./base.scss')
 var mod1 = require('./mod-1.js')
 var myJson = require('./file.json')
-var myCss = require('./base.scss')
 
 module.exports = function (assets) {
   if (assets) {
@@ -13,12 +13,15 @@ module.exports = function (assets) {
   // Run server-side AND client-side
   console.log(mod1.func())
   console.log('myJson', myJson)
-  console.log('myCss', myCss)
+  console.log('myCss', baseCss)
 
   // Run client-side ONLY
+  // NOT NEEDED if using style-loader (this is exactly what style-loader does!)
   if (typeof window !== 'undefined') {
-    var style = document.createElement('style')
-    style.innerHTML = myCss[0][1]
-    document.getElementsByTagName('head')[0].appendChild(style)
+    if (baseCss[0]) {
+      var style = document.createElement('style')
+      style.innerHTML = baseCss[0][1]
+      document.getElementsByTagName('head')[0].appendChild(style)
+    }
   }
 }

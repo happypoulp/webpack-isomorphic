@@ -24,7 +24,8 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        loaders: ['css', 'sass'] // It is required to use ALL both loaders and in this specific order!
+        loaders: ['style', 'css', 'sass'] // It is required to use ALL loaders and in this specific order!
+        // loaders: ['css', 'sass'] // It is required to use ALL loaders and in this specific order!
       },
     ],
   },
