@@ -5,7 +5,7 @@ if (__ISO_TOOLS__ !== 'false') {
     ISOMORPHIC_TOOLS.refresh();
   }
 
-  console.log(ISOMORPHIC_TOOLS.assets())
+  console.log('>>> ISOMORPHIC_TOOLS.assets() =', ISOMORPHIC_TOOLS.assets())
 }
 
 require('./index.js')
