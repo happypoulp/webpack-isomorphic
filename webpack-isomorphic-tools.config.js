@@ -4,5 +4,8 @@ module.exports = {
     json: {
       extensions: ['json']
     },
+    scss: {
+      extensions: ['scss']
+    },
   }
 }

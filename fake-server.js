@@ -1,11 +1,13 @@
 console.log('FAKE SERVER')
 
+var assets = null
+
 if (__ISO_TOOLS__ !== 'false') {
   if (__DEV__) {
     ISOMORPHIC_TOOLS.refresh();
   }
 
-  console.log('>>> ISOMORPHIC_TOOLS.assets() =', ISOMORPHIC_TOOLS.assets())
+  assets = ISOMORPHIC_TOOLS.assets()
 }
 
-require('./index.js')
+require('./view.js')(assets)

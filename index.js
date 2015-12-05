@@ -1,5 +1,3 @@
-var mod1 = require('./mod-1.js')
-var myJson = require('./file.json')
+var view = require('./view.js')
 
-console.log(mod1.func())
-console.log(myJson)
+view(window.__ISOMORPHIC_ASSETS__)

@@ -1,0 +1,9 @@
+$font-stack: Georgia, sans-serif;
+$primary-color: #333;
+$backgound-color: #aaa;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+  background: $backgound-color;
+}

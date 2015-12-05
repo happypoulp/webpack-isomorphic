@@ -22,6 +22,10 @@ module.exports = {
         test: /\.json$/,
         loader: 'json-loader'
       },
+      {
+        test: /\.scss$/,
+        loaders: ['css', 'sass'] // It is required to use ALL both loaders and in this specific order!
+      },
     ],
   },
   plugins: [
