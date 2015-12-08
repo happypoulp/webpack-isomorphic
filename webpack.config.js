@@ -1,5 +1,6 @@
 var path = require('path')
 var WebpackIsoToolsPlugin = require('webpack-isomorphic-tools/plugin')
+var IconFontPlugin = require('iconfont-loader/IconFontPlugin')
 
 var isomorphicPlugin = new WebpackIsoToolsPlugin(require('./webpack-isomorphic-tools.config.js'))
 var __DEV__ = process.env.NODE_ENV == 'dev'
@@ -23,6 +24,10 @@ module.exports = {
         loader: 'json-loader'
       },
       {
+        test: /\.svg$/,
+        loader: 'iconfont-loader'
+      },
+      {
         test: /\.scss$/,
         loaders: ['style', 'css', 'sass'] // It is required to use ALL loaders and in this specific order!
         // loaders: ['css', 'sass'] // It is required to use ALL loaders and in this specific order!
@@ -30,6 +35,7 @@ module.exports = {
     ],
   },
   plugins: [
+    new IconFontPlugin({ fontName: 'icon-font' }),
     isomorphicPlugin
   ]
 }

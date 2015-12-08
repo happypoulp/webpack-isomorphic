@@ -1,6 +1,16 @@
+// REQUIRING a SCSS
 var baseCss = require('./base.scss')
 var mod1 = require('./mod-1.js')
+
+// REQUIRING a JSON
 var myJson = require('./file.json')
+
+// REQUIRING a SVG
+// console.log('require("iconfont-loader")')
+// var IconFont = require('iconfont-loader');
+console.log('require("./svg/icon-list.svg")')
+var iconList = require('./svg/icon-list.svg')
+var iconSearch = require('./svg/icon-search.svg')
 
 module.exports = function (assets) {
   if (assets) {
@@ -14,6 +24,9 @@ module.exports = function (assets) {
   console.log(mod1.func())
   console.log('myJson', myJson)
   console.log('myCss', baseCss)
+  // console.log('IconFont:', IconFont)
+  console.log('iconList:', iconList)
+  console.log('iconSearch:', iconSearch)
 
   // Run client-side ONLY
   // NOT NEEDED if using style-loader (this is exactly what style-loader does!)

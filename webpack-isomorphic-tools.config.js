@@ -6,6 +6,9 @@ module.exports = {
     json: {
       extensions: ['json']
     },
+    svg: {
+      extensions: ['svg'],
+    },
     scss: {
       extensions: ['scss'],
       path: WebpackIsomorphicToolsPlugin.style_loader_path_extractor,
