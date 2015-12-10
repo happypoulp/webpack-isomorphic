@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "NODE_ENV=dev node bin/server.js",
-    "webpack": "NODE_ENV=dev webpack  --colors --progress --watch"
+    "webpack": "NODE_ENV=dev webpack  --colors --progress --watch",
+    "webpack-dev": "NODE_ENV=dev node webpack-dev-server.js",
+    "clean-stats": "rm -f webpack-assets.json webpack-stats.json"
   },
   "author": "",
   "license": "ISC",
@@ -17,6 +19,7 @@
     "sass-loader": "^3.1.2",
     "style-loader": "^0.13.0",
     "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0",
     "webpack-isomorphic-tools": "^2.2.18"
   }
 }

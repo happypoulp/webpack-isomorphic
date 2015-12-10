@@ -14,14 +14,14 @@ module.exports = function (assets) {
   console.log(mod1.func())
   console.log('myJson', myJson)
   console.log('myCss', baseCss)
+  console.log('ddd sdlcidufh')
 
-  // Run client-side ONLY
-  // NOT NEEDED if using style-loader (this is exactly what style-loader does!)
-  if (typeof window !== 'undefined') {
-    if (baseCss[0]) {
-      var style = document.createElement('style')
-      style.innerHTML = baseCss[0][1]
-      document.getElementsByTagName('head')[0].appendChild(style)
-    }
-  }
+  return `<h1>Webpack isomorphic tools</h1>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+      laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+      sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>`
 }
