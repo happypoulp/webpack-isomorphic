@@ -19,7 +19,9 @@
     "sass-loader": "^3.1.2",
     "style-loader": "^0.13.0",
     "webpack": "^1.12.9",
+    "webpack-dev-middleware": "^1.4.0",
     "webpack-dev-server": "^1.14.0",
+    "webpack-hot-middleware": "^2.6.0",
     "webpack-isomorphic-tools": "^2.2.18"
   }
 }

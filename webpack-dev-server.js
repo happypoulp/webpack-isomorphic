@@ -7,6 +7,13 @@ const PORT = 9099
 
 new WebpackDevServer(compiler, {
   publicPath: webpackConfig.output.publicPath,
+  // hot: true,
+  // noInfo: true,
+  // stats: {color: true},
+  // quiet: true,
+  // watchOptions: {
+  //   poll: true
+  // }
 }).listen(PORT, '0.0.0.0', function(err) {
   if (err) {
     console.log(err)
