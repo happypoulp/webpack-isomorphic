@@ -1,3 +1,5 @@
+// https://github.com/gaearon/react-hot-loader/blob/master/docs/Troubleshooting.md#no-access-control-allow-origin-header-is-present-on-the-requested-resource
+
 var WebpackDevServer = require('webpack-dev-server')
 var webpack = require('webpack')
 var webpackConfig = require('./webpack.config.js')
