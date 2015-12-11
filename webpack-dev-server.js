@@ -11,7 +11,9 @@ new WebpackDevServer(compiler, {
   publicPath: webpackConfig.output.publicPath,
   hot: true,
   // noInfo: true,
-  // stats: {color: true},
+  stats: {
+    colors: true
+  },
   // quiet: true,
   // watchOptions: {
   //   poll: true
