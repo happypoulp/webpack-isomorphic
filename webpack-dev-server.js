@@ -9,7 +9,7 @@ const PORT = 9099
 
 new WebpackDevServer(compiler, {
   publicPath: webpackConfig.output.publicPath,
-  // hot: true,
+  hot: true,
   // noInfo: true,
   // stats: {color: true},
   // quiet: true,

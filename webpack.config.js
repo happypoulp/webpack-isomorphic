@@ -1,6 +1,6 @@
 var path = require('path')
 var WebpackIsoToolsPlugin = require('webpack-isomorphic-tools/plugin')
-// var webpack = require('webpack')
+var webpack = require('webpack')
 
 var isomorphicPlugin = new WebpackIsoToolsPlugin(require('./webpack-isomorphic-tools.config.js'))
 var __DEV__ = process.env.NODE_ENV == 'dev'
@@ -13,15 +13,14 @@ module.exports = {
   context: path.resolve(__dirname),
   entry: {
     main: [
-      // 'webpack/hot/dev-server',
       'webpack-dev-server/client?http://localhost:9099',
+      'webpack/hot/dev-server',
       './index.js',
     ]
   },
   output: {
     path: path.resolve(__dirname, 'build'),
-    // publicPath: 'http://localhost:9099/static/',
-    publicPath: '/static/',
+    publicPath: 'http://localhost:9099/static/', // To fix error: Syntax error: Unexpected token <
     filename: `[name].js` // by default, name = main
   },
   module: {
@@ -38,7 +37,7 @@ module.exports = {
     ],
   },
   plugins: [
-    // new webpack.HotModuleReplacementPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
     // new webpack.NoErrorsPlugin(),
     isomorphicPlugin
   ]
