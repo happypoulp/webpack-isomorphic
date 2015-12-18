@@ -4,3 +4,4 @@ npm-debug.log
 webpack-assets.json
 webpack-stats.json
 .DS_Store
+dist/
