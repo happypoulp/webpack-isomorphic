@@ -10,9 +10,9 @@ if (__DEV__) {
 
 module.exports = {
   context: path.resolve(__dirname),
-  entry: './index.js',
+  entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, 'build'),
+    path: path.resolve(__dirname, 'dist'),
     publicPath: '/static/',
     filename: `[name].js` // by default, name = main
   },
@@ -24,8 +24,7 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        loaders: ['style', 'css', 'sass'] // It is required to use ALL loaders and in this specific order!
-        // loaders: ['css', 'sass'] // It is required to use ALL loaders and in this specific order!
+        loaders: ['style', 'css', 'sass']
       },
     ],
   },
