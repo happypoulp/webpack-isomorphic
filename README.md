@@ -1,6 +1,6 @@
 # Webpack isomorphic experiments
 
-Play with webpack-isomorphic-tools...
+Highlight webpack stats issue...
 
 Run webpack compilation:
 ```
