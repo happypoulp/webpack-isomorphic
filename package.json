@@ -5,18 +5,11 @@
   "main": "app/src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "NODE_ENV=dev node app/bin/server.js",
-    "webpack": "NODE_ENV=dev webpack  --colors --progress --watch --config app/webpack.config.js"
+    "webpack": "webpack  --colors --progress --json --config app/webpack.config.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "css-loader": "^0.23.0",
-    "json-loader": "^0.5.4",
-    "node-sass": "^3.4.2",
-    "sass-loader": "^3.1.2",
-    "style-loader": "^0.13.0",
-    "webpack": "^1.12.9",
-    "webpack-isomorphic-tools": "^2.2.18"
+    "webpack": "^1.12.9"
   }
 }
