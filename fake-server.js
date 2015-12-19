@@ -3,13 +3,11 @@ var http = require('http')
 
 var assets = null
 
-if (__ISO_TOOLS__ !== 'false') {
-  if (__DEV__) {
-    ISOMORPHIC_TOOLS.refresh();
-  }
-
-  assets = ISOMORPHIC_TOOLS.assets()
+if (__DEV__) {
+  ISOMORPHIC_TOOLS.refresh();
 }
+
+assets = ISOMORPHIC_TOOLS.assets()
 
 var server = http.createServer(function(req, res) {
   var viewContent = require('./view.js')(assets)

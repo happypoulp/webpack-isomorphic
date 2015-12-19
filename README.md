@@ -2,12 +2,12 @@
 
 Play with webpack-isomorphic-tools...
 
-Run the "server" with `webpack-isomorphic-tools`:
+Run the `webpack-dev-server`:
 ```
-npm start
+npm run webpack-dev
 ```
 
-Run the "server" without `webpack-isomorphic-tools`:
+Run the application server with `webpack-isomorphic-tools`:
 ```
-ISO_TOOLS=false npm start
+npm start
 ```
