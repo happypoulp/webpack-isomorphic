@@ -18,7 +18,7 @@ var server = http.createServer(function(req, res) {
       <link href="/public/favicon.ico" rel="shortcut icon" type="image/ico" />
     </head>
     <body>
-      <div id="app-wrapper">${viewContent}</div>
+      <div id="root">${viewContent}</div>
       <script type="text/javascript" src="http://localhost:9099/static/main.js"></script>
     </body>
   </html>`
