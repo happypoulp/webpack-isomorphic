@@ -14,7 +14,15 @@ module.exports = {
         this.plugin("done", function(stats)
         {
           console.log('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
-          console.log(JSON.stringify(stats.toJson(), null, 2))
+          console.log(
+            JSON.stringify(
+              stats.toJson(
+                {
+                  context: path.resolve(__dirname)
+                }
+            ),
+            null, 2)
+          )
           console.log('<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<')
         })
     }
