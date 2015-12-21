@@ -22,6 +22,6 @@
     "webpack-dev-middleware": "^1.4.0",
     "webpack-dev-server": "^1.14.0",
     "webpack-hot-middleware": "^2.6.0",
-    "webpack-isomorphic-tools": "^2.2.18"
+    "webpack-isomorphic-tools": "2.2.24"
   }
 }
